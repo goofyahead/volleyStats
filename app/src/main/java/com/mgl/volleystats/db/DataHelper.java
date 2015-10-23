@@ -12,6 +12,12 @@ import android.util.Log;
 
 import com.mgl.volleystats.base.VolleyPrefs;
 import com.mgl.volleystats.base.VolleyStatApplication;
+import com.mgl.volleystats.models.Block;
+import com.mgl.volleystats.models.Fault;
+import com.mgl.volleystats.models.Point;
+import com.mgl.volleystats.models.Reception;
+import com.mgl.volleystats.models.Serve;
+import com.mgl.volleystats.models.Set;
 import com.mgl.volleystats.models.Spike;
 
 import java.io.File;
@@ -46,6 +52,82 @@ public class DataHelper {
 		db.insert(DbHelper.TABLE_NAME_SPIKES, null, values);
 		db.close();
 	}
+
+    public void saveServe (Serve play) {
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DbHelper.PLAYER, play.getPlayerId());
+        values.put(DbHelper.QUALITY, play.getQuality());
+        values.put(DbHelper.SYNCED, 0);
+        values.put(DbHelper.TIMESTAMP, play.getTimeStamp());
+        values.put(DbHelper.MATCH_ID, play.getMatchId());
+
+        db.insert(DbHelper.TABLE_NAME_SERVES, null, values);
+        db.close();
+    }
+
+    public void saveSet (Set play) {
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DbHelper.PLAYER, play.getPlayerId());
+        values.put(DbHelper.QUALITY, play.getQuality());
+        values.put(DbHelper.SYNCED, 0);
+        values.put(DbHelper.TIMESTAMP, play.getTimeStamp());
+        values.put(DbHelper.MATCH_ID, play.getMatchId());
+
+        db.insert(DbHelper.TABLE_NAME_SETS, null, values);
+        db.close();
+    }
+
+    public void saveReception (Reception play) {
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DbHelper.PLAYER, play.getPlayerId());
+        values.put(DbHelper.QUALITY, play.getQuality());
+        values.put(DbHelper.SYNCED, 0);
+        values.put(DbHelper.TIMESTAMP, play.getTimeStamp());
+        values.put(DbHelper.MATCH_ID, play.getMatchId());
+
+        db.insert(DbHelper.TABLE_NAME_RECEPTION, null, values);
+        db.close();
+    }
+
+    public void saveBlock (Block play) {
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DbHelper.PLAYER, play.getPlayerId());
+        values.put(DbHelper.QUALITY, play.getQuality());
+        values.put(DbHelper.SYNCED, 0);
+        values.put(DbHelper.TIMESTAMP, play.getTimeStamp());
+        values.put(DbHelper.MATCH_ID, play.getMatchId());
+
+        db.insert(DbHelper.TABLE_NAME_BLOCK, null, values);
+        db.close();
+    }
+
+    public void savePoint (Point play) {
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DbHelper.PLAYER, play.getPlayerId());
+        values.put(DbHelper.SYNCED, 0);
+        values.put(DbHelper.TIMESTAMP, play.getTimeStamp());
+        values.put(DbHelper.MATCH_ID, play.getMatchId());
+
+        db.insert(DbHelper.TABLE_NAME_BLOCK, null, values);
+        db.close();
+    }
+
+    public void saveFault (Fault play) {
+        SQLiteDatabase db = openHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DbHelper.PLAYER, play.getPlayerId());
+        values.put(DbHelper.SYNCED, 0);
+        values.put(DbHelper.TIMESTAMP, play.getTimeStamp());
+        values.put(DbHelper.MATCH_ID, play.getMatchId());
+
+        db.insert(DbHelper.TABLE_NAME_BLOCK, null, values);
+        db.close();
+    }
 	
 //	public Cursor getDishCursor () {
 //		SQLiteDatabase db = openHelper.getWritableDatabase();

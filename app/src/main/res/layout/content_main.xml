@@ -11,4 +11,11 @@
 
     <TextView android:text="Hello World!" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:iiv_color="@color/green"
+        app:iiv_icon="cmd-emoticon-happy" />
+
 </RelativeLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/player_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:iiv_color="@color/black"
+        app:iiv_icon="cmd-account-circle" />
+
+    <LinearLayout
+        android:layout_below="@id/player_image"
+        android:orientation="vertical"
+        android:id="@+id/attacking_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:text="@string/spike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-sad" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-neutral" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-happy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:text="@string/serve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-sad" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-neutral" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-happy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/attacking_holder"
+        android:orientation="vertical"
+        android:id="@+id/deffensive_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:text="@string/block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-sad" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-neutral" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-happy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:text="@string/reception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-sad" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-neutral" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-happy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:text="@string/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-sad" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-neutral" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-happy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/deffensive_holder"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:minEms="8"
+            android:text="@string/fault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:minEms="8"
+            android:text="@string/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

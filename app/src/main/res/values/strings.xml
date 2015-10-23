@@ -5,4 +5,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="spike">Remate:</string>
+    <string name="serve">Saque:</string>
+    <string name="block">Bloqueo:</string>
+    <string name="reception">Recepcion:</string>
+    <string name="setting">Colocacion:</string>
+    <string name="fault">FALTA</string>
+    <string name="point">PUNTO</string>
 </resources>
