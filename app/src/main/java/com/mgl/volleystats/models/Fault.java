@@ -7,6 +7,14 @@ public class Fault {
     private String playerId;
     private String timeStamp;
     private String matchId;
+    private String teamId;
+
+    public Fault(String playerId, String timeStamp, String matchId, String teamId) {
+        this.playerId = playerId;
+        this.timeStamp = timeStamp;
+        this.matchId = matchId;
+        this.teamId = teamId;
+    }
 
     public String getPlayerId() {
         return playerId;

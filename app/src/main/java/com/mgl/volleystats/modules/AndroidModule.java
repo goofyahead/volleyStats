@@ -8,11 +8,18 @@ import android.app.DownloadManager;
 import android.content.Context;
 
 
+import com.mgl.volleystats.activities.CreatePlayerActivity;
 import com.mgl.volleystats.activities.MainActivity;
 import com.mgl.volleystats.api.VolleyStatsApi;
 import com.mgl.volleystats.base.Credentials;
 import com.mgl.volleystats.base.VolleyPrefs;
 import com.mgl.volleystats.db.DataHelper;
+import com.mgl.volleystats.dialogFragments.PlayerDialogFragment;
+import com.mgl.volleystats.fragments.CurrentMatch;
+import com.mgl.volleystats.fragments.DefinePositions;
+import com.mgl.volleystats.fragments.NewMatch;
+import com.mgl.volleystats.fragments.SelectTeam;
+import com.mgl.volleystats.fragments.TeamView;
 
 import javax.inject.Singleton;
 
@@ -23,6 +30,13 @@ import retrofit.RestAdapter;
 @Module(injects = {
         MainActivity.class,
         DataHelper.class,
+        CreatePlayerActivity.class,
+        SelectTeam.class,
+        TeamView.class,
+        NewMatch.class,
+        DefinePositions.class,
+        CurrentMatch.class,
+        PlayerDialogFragment.class
 },
         library = true)
 public class AndroidModule {

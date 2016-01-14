@@ -5,7 +5,9 @@ package com.mgl.volleystats.models;
  */
 public class Reception extends Play {
 
-    public Reception(String playerId, int quality, String timeStamp, String matchId) {
-        super(playerId, quality, timeStamp, matchId);
+    private String type = Reception.class.getSimpleName();
+
+    public Reception(String playerId, int quality, String timeStamp, String matchId, String teamId) {
+        super(playerId, quality, timeStamp, matchId, teamId);
     }
 }

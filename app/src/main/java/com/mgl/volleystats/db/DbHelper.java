@@ -36,6 +36,8 @@ public class DbHelper extends SQLiteOpenHelper{
 
     // DEFENSIVE TABLES
 
+    // DEFENSE AFTER RECEIVING
+
     //RECEPTION TABLE
     public static final String TABLE_NAME_RECEPTION = "RECEPTION_TABLE";
     public static final String RECEPTION_ID = "_id";

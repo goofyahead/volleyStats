@@ -5,7 +5,9 @@ package com.mgl.volleystats.models;
  */
 public class Serve extends Play{
 
-    public Serve(String playerId, int quality, String timeStamp, String matchId) {
-        super(playerId, quality, timeStamp, matchId);
+    private String type = Serve.class.getSimpleName();
+
+    public Serve(String playerId, int quality, String timeStamp, String matchId, String teamId) {
+        super(playerId, quality, timeStamp, matchId, teamId);
     }
 }

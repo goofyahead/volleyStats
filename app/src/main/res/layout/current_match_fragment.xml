@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:gravity="center"
+                android:text="GO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/spike_bad"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-timer" />
+
+                <TextView
+                    android:id="@+id/match_timer"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/match_set_number"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                style="@style/header_3"
+                android:text="Set 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:id="@+id/we_serve"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:iiv_color="@color/black"
+                        app:iiv_icon="faw-hand-paper-o" />
+
+                    <TextView
+                        android:id="@+id/local_score"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        style="@style/header_2"
+                        android:textSize="40sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/localPoint"
+                    android:text="@string/point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <View
+                android:background="@color/gray"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/visitor_score"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        style="@style/header_2"
+                        android:textSize="40sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:id="@+id/they_serve"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:iiv_color="@color/black"
+                        app:iiv_icon="faw-hand-paper-o" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/visitor_point"
+                    android:text="@string/point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_above="@+id/players"
+        android:id="@+id/court_holder"
+        android:background="@drawable/court"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/position1"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="MB/LB"
+            android:src="@drawable/mblb"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:id="@+id/setter"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:src="@drawable/setter"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <ImageView
+            android:id="@+id/position3"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="HIT"
+            android:src="@drawable/hitter"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:id="@+id/position4"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="MB/LB"
+            android:src="@drawable/mblb"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:id="@+id/position5"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="OP"
+            android:src="@drawable/oposite"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:id="@+id/position6"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="HIT"
+            android:src="@drawable/hitter"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/rotate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:iiv_color="@color/black"
+            app:iiv_icon="gmd-autorenew" />
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:id="@+id/atq"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:iiv_color="@color/black"
+                app:iiv_icon="gmd-keyboard-arrow-up" />
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/base"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:iiv_color="@color/black"
+                app:iiv_icon="gmd-vertical-align-center" />
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:id="@+id/def"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:iiv_color="@color/black"
+                app:iiv_icon="gmd-keyboard-arrow-down" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/players" />
+
+
+
+</RelativeLayout>

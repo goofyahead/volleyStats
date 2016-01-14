@@ -42,4 +42,6 @@
     <color name="nowfie_light_gray">#8A8A8A</color>
     <color name="nowfie_lighter_gray">#ACACAC</color>
     <color name="nowfie_black">#313131</color>s
+    <color name="background_holo_dark">#ff000000</color>
+    <color name="background_holo_light">#FFEEEEEE</color>
 </resources>

@@ -12,4 +12,37 @@
     <string name="setting">Colocacion:</string>
     <string name="fault">FALTA</string>
     <string name="point">PUNTO</string>
+    <string name="defense">Defensa:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_name">Nombre:</string>
+    <string name="player_position">Posicion:</string>
+    <string name="player_number">Numero:</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="set_team_password">Escriba la contraseña</string>
+    <string name="wrong_pass">Password incorrecto</string>
+    <string name="team_not_selected">Equipo no seleccionado, intentelo de nuevo</string>
+    <string name="create_player">Nuevo jugador</string>
+    <string name="new_match">Nuevo partido</string>
+    <string name="options">Opciones</string>
+    <string name="create_new_match">nuevo partido</string>
+    <string name="opposing_team">Equipo contrario:</string>
+    <string name="place_venue">Direccion:</string>
+    <string name="players_available">Jugadores disponibles:</string>
+    <string name="date_and_time">Fecha y hora:</string>
+    <string name="set_date">Selecciona la fecha:</string>
+    <string name="pick_time">Selecciona hora</string>
+    <string name="pick_date">Selecciona fecha</string>
+    <string name="selected_players">Jugadores convocados:</string>
+    <string name="current_match">Partido actual</string>
+    <string name="positions">Definir posiciones</string>
+    <string name="next">Siguiente</string>
+    <string name="base_position">Base</string>
+    <string name="atq_position">Ataque</string>
+    <string name="reception_position">Recepcion</string>
+    <string name="rotate">Rotar</string>
+    <string name="save_rotation">Guardar rotacion</string>
+
 </resources>

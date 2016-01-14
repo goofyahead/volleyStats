@@ -8,12 +8,14 @@ public class Play {
     private int quality;
     private String timeStamp;
     private String matchId;
+    private String teamId;
 
-    public Play(String playerId, int quality, String timeStamp, String matchId) {
+    public Play(String playerId, int quality, String timeStamp, String matchId, String teamId) {
         this.playerId = playerId;
         this.quality = quality;
         this.timeStamp = timeStamp;
         this.matchId = matchId;
+        this.teamId = teamId;
     }
 
     public String getMatchId() {

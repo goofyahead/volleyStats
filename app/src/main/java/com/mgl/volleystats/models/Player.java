@@ -1,16 +1,27 @@
 package com.mgl.volleystats.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
  * Created by goofyahead on 10/23/15.
  */
 public class Player implements Serializable{
+    private String teamId;
     private String name;
     private String picture;
+    @SerializedName("_id")
     private String id;
     private int number;
     private String mainPos;
+
+    public Player(String teamId, String name, int number, String mainPos) {
+        this.teamId = teamId;
+        this.name = name;
+        this.number = number;
+        this.mainPos = mainPos;
+    }
 
     public String getName() {
         return name;

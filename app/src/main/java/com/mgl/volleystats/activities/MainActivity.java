@@ -1,8 +1,13 @@
 package com.mgl.volleystats.activities;
 
+import android.app.Activity;
+import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,25 +19,39 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.mgl.volleystats.R;
+import com.mgl.volleystats.api.VolleyStatsApi;
+import com.mgl.volleystats.base.VolleyPrefs;
+import com.mgl.volleystats.base.VolleyStatApplication;
+import com.mgl.volleystats.dialogFragments.PasswordDialogFragment;
+import com.mgl.volleystats.fragments.CurrentMatch;
+import com.mgl.volleystats.fragments.DefinePositions;
+import com.mgl.volleystats.fragments.NewMatch;
+import com.mgl.volleystats.fragments.SelectTeam;
+import com.mgl.volleystats.fragments.TeamView;
+import com.mgl.volleystats.interfaces.OnPasswordGiven;
+
+import javax.inject.Inject;
+
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, PasswordDialogFragment.PasswordSetInterface, SelectTeam.TeamSelected {
+
+    private static final String TAG = MainActivity.class.getName();
+    @Inject
+    VolleyPrefs prefs;
+    private OnPasswordGiven mPasswordGiven;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.inject(this);
+        ((VolleyStatApplication) getApplication()).inject(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,6 +61,35 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (prefs.getTeamId().equalsIgnoreCase("none")) {
+            // show team selection
+            Log.d(TAG, "show team selector");
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            SelectTeam dlView = SelectTeam.newInstance();
+            mPasswordGiven = dlView;
+            ft.replace(R.id.fragment_holder, dlView);
+            ft.commit();
+
+        } else {
+            // show normal screen resume of team
+            Log.d(TAG, "team is selected");
+            Log.d(TAG, "show home for team");
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            TeamView dlView = TeamView.newInstance(prefs.getTeamId());
+            ft.replace(R.id.fragment_holder, dlView);
+            ft.commit();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+//        FragmentTransaction ft = getFragmentManager().beginTransaction();
+//        CreatePlayer dlView = CreatePlayer.newInstance();
+//        ft.replace(R.id.fragment_holder, dlView);
+//        ft.commit();
     }
 
     @Override
@@ -82,14 +130,25 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
+        if (id == R.id.create_player) {
+            Intent createPlayer = new Intent(MainActivity.this, CreatePlayerActivity.class);
+            startActivity(createPlayer);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.new_match) {
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            NewMatch dlView = NewMatch.newInstance();
+            ft.replace(R.id.fragment_holder, dlView);
+            ft.commit();
+        } else if (id == R.id.positions) {
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            DefinePositions dlView = DefinePositions.newInstance(prefs.getTeamId());
+            ft.replace(R.id.fragment_holder, dlView);
+            ft.commit();
+        } else if (id == R.id.current_match){
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            CurrentMatch dlView = CurrentMatch.newInstance(prefs.getTeamId());
+            ft.replace(R.id.fragment_holder, dlView);
+            ft.commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -99,5 +158,19 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onPasswordGiven(String string) {
+        mPasswordGiven.passwordGiven(string);
+    }
+
+    @Override
+    public void onTeamSelected(String id) {
+        Log.d(TAG, "show home for team");
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        TeamView dlView = TeamView.newInstance(id);
+        ft.replace(R.id.fragment_holder, dlView);
+        ft.commit();
     }
 }

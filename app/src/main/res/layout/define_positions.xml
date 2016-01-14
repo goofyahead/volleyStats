@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/base"
+            android:layout_weight="1"
+            android:text="@string/base_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/atq"
+            android:layout_weight="1"
+            android:text="@string/atq_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/def"
+            android:layout_weight="1"
+            android:text="@string/reception_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/positions_court"
+        android:background="@drawable/court"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        
+        <TextView
+            android:id="@+id/position1"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="MB/LB"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/setter"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="SET"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:id="@+id/position3"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="HIT"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/position4"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="MB/LB"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/position5"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="OP"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/position6"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:text="HIT"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/save_rotation"
+            android:text="@string/save_rotation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/rotation"
+            android:text="@string/rotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

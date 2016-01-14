@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_camara" android:icon="@android:drawable/ic_menu_camera"
-            android:title="Import" />
-        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
-            android:title="Tools" />
+        <item android:id="@+id/create_player" android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/create_player" />
+        <item android:id="@+id/new_match" android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/new_match" />
+        <item android:id="@+id/current_match" android:icon="@android:drawable/ic_lock_idle_alarm"
+            android:title="@string/current_match" />
+        <item android:id="@+id/positions" android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/positions" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/options">
         <menu>
             <item android:id="@+id/nav_share" android:icon="@android:drawable/ic_menu_share"
                 android:title="Share" />

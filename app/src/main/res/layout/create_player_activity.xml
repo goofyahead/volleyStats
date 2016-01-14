@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/player_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:iiv_color="@color/black"
+            app:iiv_icon="cmd-account-circle" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_name"/>
+
+        <EditText
+            android:id="@+id/player_name"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="12"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_position"/>
+
+        <Spinner
+            android:entries="@array/positions"
+            android:id="@+id/player_position"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="260dp"
+            android:minHeight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_number"/>
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/player_number"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="12"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/save"
+        android:text="save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -5,7 +5,9 @@ package com.mgl.volleystats.models;
  */
 public class Spike extends Play{
 
-    public Spike(String playerId, int quality, String timeStamp, String matchId) {
-        super(playerId, quality, timeStamp, matchId);
+    private String type = Spike.class.getSimpleName();
+
+    public Spike(String playerId, int quality, String timeStamp, String matchId, String teamId) {
+        super(playerId, quality, timeStamp, matchId, teamId);
     }
 }

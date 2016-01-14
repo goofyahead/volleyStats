@@ -2,11 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <com.mikepenz.iconics.view.IconicsImageView
-        android:id="@+id/player_image"
+        android:id="@+id/player_detail_imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="5dp"
         android:layout_width="100dp"
@@ -15,7 +16,7 @@
         app:iiv_icon="cmd-account-circle" />
 
     <LinearLayout
-        android:layout_below="@id/player_image"
+        android:layout_below="@id/player_detail_imageView"
         android:orientation="vertical"
         android:id="@+id/attacking_holder"
         android:layout_width="match_parent"
@@ -31,13 +32,14 @@
                 android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="44dp"
+                android:layout_marginRight="34dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/spike_bad"
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -45,6 +47,7 @@
                     app:iiv_icon="cmd-emoticon-sad" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/spike_neutral"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -52,6 +55,7 @@
                     app:iiv_icon="cmd-emoticon-neutral" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/spike_good"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -73,13 +77,14 @@
                 android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="44dp"
+                android:layout_marginRight="34dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/serve_bad"
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -87,6 +92,7 @@
                     app:iiv_icon="cmd-emoticon-sad" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/serve_neutral"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -94,6 +100,7 @@
                     app:iiv_icon="cmd-emoticon-neutral" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/serve_good"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -116,18 +123,19 @@
             <TextView
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="44dp"
-                android:text="@string/block"
+                android:text="@string/defense"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="44dp"
+                android:layout_marginRight="34dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/defense_bad"
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -135,6 +143,7 @@
                     app:iiv_icon="cmd-emoticon-sad" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/defense_neutral"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -142,6 +151,50 @@
                     app:iiv_icon="cmd-emoticon-neutral" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/defense_good"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-happy" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:text="@string/block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="34dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/block_bad"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-sad" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/block_neutral"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:iiv_color="@color/black"
+                    app:iiv_icon="cmd-emoticon-neutral" />
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/block_good"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -163,13 +216,14 @@
                 android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="44dp"
+                android:layout_marginRight="34dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/reception_bad"
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -177,6 +231,7 @@
                     app:iiv_icon="cmd-emoticon-sad" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/reception_neutral"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -184,6 +239,7 @@
                     app:iiv_icon="cmd-emoticon-neutral" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/reception_good"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -204,13 +260,14 @@
                 android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="44dp"
+                android:layout_marginRight="34dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/setting_bad"
                     android:layout_marginLeft="30dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -218,6 +275,7 @@
                     app:iiv_icon="cmd-emoticon-sad" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/setting_neutral"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -225,6 +283,7 @@
                     app:iiv_icon="cmd-emoticon-neutral" />
 
                 <com.mikepenz.iconics.view.IconicsImageView
+                    android:id="@+id/setting_good"
                     android:layout_marginLeft="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -244,14 +303,9 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/foul"
             android:minEms="8"
             android:text="@string/fault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:minEms="8"
-            android:text="@string/point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
